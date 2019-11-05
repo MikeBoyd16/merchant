@@ -1,0 +1,8 @@
+{
+  "1": {
+    "name": "Health Potion",
+    "type": "Consumable",
+    "base_value": "15",
+    "description": "Restores 25 HP"
+  }
+}
