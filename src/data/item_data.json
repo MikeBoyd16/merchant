@@ -4,5 +4,11 @@
     "type": "Consumable",
     "base_value": "15",
     "description": "Restores 25 HP"
+  },
+  "2": {
+    "name": "Mana Potion",
+    "type": "Consumable",
+    "base_value": "15",
+    "description": "Restores 25 MP"
   }
 }
