@@ -1,69 +1,41 @@
 """
 The Player class
 """
-from item import *
+from character import *
 
 
-class Player:
-    def __init__(self, name, race, region):
-        self.name = name
-        self.race = race
-        self.region = region
-        self.inventory = {}
+class Player(Character):
+    def __init__(self, name, race, combat_class):
+        super().__init__(name, race, combat_class)
 
     """
-    Adds and item of a specified quantity to the player's inventory
+    Adds an item of a specified quantity to the player's inventory
     """
     def add_item(self, item_id, quantity):
-        if item_id in self.inventory:
-            self.inventory[item_id].quantity += quantity
-        else:
-            self.inventory[item_id] = Item(item_id)
-            self.inventory[item_id].quantity = quantity
-        print("\n" + str(quantity), self.inventory[item_id].name + "(s) added to your inventory.")
+        super().add_item(item_id, quantity)
+        print("\n" + str(quantity), self.inventory[item_id].name + "(s) added to your inventory")
 
     """
     Removes an item of a specified quantity from the player's inventory
     """
     def remove_item(self, item_id, quantity):
-        if item_id in self.inventory:
-            if self.inventory[item_id].quantity - quantity < 0:
-                print("\nInventory error. Not enough " + self.inventory[item_id].name + "s.")
-                return
-            elif self.inventory[item_id].quantity - quantity == 0:
-                self.inventory.pop(item_id)
-            else:
-                self.inventory[item_id].quantity -= quantity
-            print("\n" + str(quantity), Item(item_id).name + "(s) removed from your inventory.")
-        else:
-            print("\nInventory error. Item doesn't exist.")
+        if super().remove_item(item_id, quantity) > 0:
+            print("\n" + str(quantity), Item(item_id).name + "(s) removed from your inventory")
 
     """
-    Displays item information for every item in the player's inventory
+    Displays item information for every item in a character's inventory
     """
     def display_inventory(self):
-        if not self.inventory:
-            print("\nInventory is empty.")
-            return
-
-        print('\n{:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format("Name", "Type", "Value", "Description", "Quantity"))
-        for item_id, item in self.inventory.items():
-            print('{:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format(item.name, item.type, str(item.base_value) + " GP",
-                                                                   item.description, str(item.quantity)))
-
-    """
-    Resets the player's inventory to be empty
-    """
-    def clear_inventory(self):
-        self.inventory = {}
+        if not super().display_inventory():
+            print("\nYour inventory is empty")
 
 
 if __name__ == "__main__":
     """ PLAYER CREATION"""
-    player1 = Player("Sam", "elf", "north")
+    player1 = Player("Sam", "Elf", "Warrior")
     assert player1.name == "Sam"
-    assert player1.race == "elf"
-    assert player1.region == "north"
+    assert player1.race == "Elf"
+    assert player1.combat_class == "Warrior"
     assert not player1.inventory
 
     """ INVENTORY MANAGEMENT """
