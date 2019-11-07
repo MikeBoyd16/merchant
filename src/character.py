@@ -9,7 +9,11 @@ class Character:
         self.name = name
         self.race = race
         self.combat_class = combat_class
+        self.current_location = None
+        self.currencies = {}
+        self.reputations = {}
         self.inventory = {}
+        self.assets = {}
 
     """
     Adds an item of a specified quantity to a character's inventory
