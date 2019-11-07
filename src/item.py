@@ -9,10 +9,10 @@ with open('data/item_data.json') as data_file:
 class Item:
     def __init__(self, item_id):
         self.id = item_id
-        self.name = item_data[item_id]["name"]
-        self.type = item_data[item_id]["type"]
-        self.base_value = item_data[item_id]["base_value"]
-        self.description = item_data[item_id]["description"]
+        self.name = item_data[self.id]["name"]
+        self.type = item_data[self.id]["type"]
+        self.base_value = item_data[self.id]["base_value"]
+        self.description = item_data[self.id]["description"]
         self.quantity = 0
 
 

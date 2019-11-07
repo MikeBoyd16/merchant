@@ -1,0 +1,23 @@
+{
+  "1": {
+    "name": "Garden Grove Market",
+    "parent_location": "Eastbrook",
+    "sub_locations": [2],
+    "connections": {"3": 10, "4": 2, "5": 2},
+    "npcs": [ 2, 3 ]
+  },
+  "2": {
+    "name": "The Happy Cudgel",
+    "parent_location": 1,
+    "sub_locations": [3],
+    "connections": {},
+    "npcs": [4, 5, 6]
+  },
+  "3": {
+    "name": "Basement",
+    "parent_location": 2,
+    "sub_locations": [],
+    "connections": {},
+    "npcs": [7]
+  }
+}
