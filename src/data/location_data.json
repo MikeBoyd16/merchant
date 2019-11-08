@@ -4,20 +4,20 @@
     "parent_location": "Eastbrook",
     "sub_locations": [2],
     "connections": {"3": 10, "4": 2, "5": 2},
-    "npcs": [ 2, 3 ]
+    "property_value": 0
   },
   "2": {
-    "name": "The Happy Cudgel",
+    "name": "East Lot #1",
     "parent_location": 1,
     "sub_locations": [3],
     "connections": {},
-    "npcs": [4, 5, 6]
+    "property_value": 15000
   },
   "3": {
     "name": "Basement",
     "parent_location": 2,
     "sub_locations": [],
     "connections": {},
-    "npcs": [7]
+    "property_value": 0
   }
 }
