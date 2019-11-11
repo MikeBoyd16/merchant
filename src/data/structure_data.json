@@ -1,0 +1,11 @@
+{
+  "HOUSE_001": {
+    "name": "Eldreth Estate",
+    "type": "House",
+    "owner": "None",
+    "is_sellable": "False",
+    "is_listed": "False",
+    "property_value": 0,
+    "interior_references": []
+  }
+}

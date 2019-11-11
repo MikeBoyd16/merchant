@@ -1,23 +1,20 @@
 {
-  "1": {
+  "COMMERCIAL_001": {
     "name": "Garden Grove Market",
-    "parent_location": "Eastbrook",
-    "sub_locations": [2],
-    "connections": {"3": 10, "4": 2, "5": 2},
-    "property_value": 0
+    "type": "Commercial",
+    "region": "Eastbrook",
+    "structure_references": []
   },
-  "2": {
-    "name": "East Lot #1",
-    "parent_location": 1,
-    "sub_locations": [3],
-    "connections": {},
-    "property_value": 15000
+  "RESIDENTIAL_001": {
+    "name": "Hightown",
+    "type": "Residential",
+    "region": "Eastbrook",
+    "structure_references": []
   },
-  "3": {
-    "name": "Basement",
-    "parent_location": 2,
-    "sub_locations": [],
-    "connections": {},
-    "property_value": 0
+  "MIXED_001": {
+    "name": "Docks",
+    "type": "Mixed",
+    "region": "Eastbrook",
+    "structure_references": []
   }
 }

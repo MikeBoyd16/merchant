@@ -6,21 +6,20 @@ with open('data/shop_data.json') as data_file:
     shop_data = json.load(data_file)
 
 
-class Shop(Location):
-    def __init__(self, location_id, shop_id):
-        super().__init__(location_id)
+class Shop:
+    def __init__(self, shop_id):
         self.id = shop_id
-        self.name = shop_data[self.id]["name"]
-        self.owner = shop_data[self.id]["owner"]
-        self.jobs = shop_data[self.id]["jobs"]
-        self.inventory = shop_data[self.id]["inventory"]
-        self.hours_of_operation = shop_data[self.id]["hours_of_operation"]
-        self.current_npcs = shop_data[self.id]["current_npcs"]
+        self.name = location_data[self.id]["name"]
+        self.owner = location_data[self.id]["owner"]
+        self.jobs = location_data[self.id]["jobs"]
+        self.inventory = location_data[self.id]["inventory"]
+        self.hours_of_operation = location_data[self.id]["hours_of_operation"]
+        self.current_npcs = location_data[self.id]["current_npcs"]
 
 
 if __name__ == "__main__":
     """ SHOP CREATION """
-    shop1 = Shop("2", "1")
+    shop1 = Shop("2")
     assert shop1.id == "1"
     assert shop1.name == shop_data[shop1.id]["name"]
     assert shop1.owner == shop_data[shop1.id]["owner"]

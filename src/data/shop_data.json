@@ -1,5 +1,5 @@
 {
-  "1": {
+  "SHOP_001": {
     "name": "The Happy Cudgel",
     "owner": 1,
     "jobs": {"Clerk": 5},
