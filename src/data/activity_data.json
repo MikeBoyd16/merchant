@@ -1,0 +1,15 @@
+{
+  "SHOPS":
+  {
+      "SHOP_001":
+      {
+        "name": "The Happy Cudgel",
+        "owner": 1,
+        "jobs": {"Clerk": 5},
+        "inventory": {},
+        "hours_of_operation": [9, 15],
+        "current_npcs": [],
+        "option_references": []
+      }
+  }
+}
