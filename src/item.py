@@ -17,6 +17,6 @@ class Item:
 
 
 if __name__ == "__main__":
-    item1 = Item("1")
+    item1 = Item("HEALTH_POTION_001")
     print(item1.name + " is a " + item1.type + " that costs " +
           str(item1.base_value) + " gold and " + item1.description)

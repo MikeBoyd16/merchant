@@ -22,6 +22,6 @@ class Structure:
 
 
 if __name__ == "__main__":
-    structure1 = Structure("1")
-    assert structure1.id == "1"
+    structure1 = Structure("HOUSE_001")
+    assert structure1.id == "HOUSE_001"
     assert structure1.name == structure_data[structure1.id]["name"]

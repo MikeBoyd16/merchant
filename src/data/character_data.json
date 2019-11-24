@@ -1,0 +1,13 @@
+{
+    "PLAYER":
+    {
+        "name": "",
+        "race": "",
+        "combat_class": "",
+        "current_location": "",
+        "currencies": {},
+        "reputations": {},
+        "inventory": {},
+        "assets": {}
+    }
+}

@@ -10,11 +10,11 @@ class Interior:
     def __init__(self, location_id):
         self.id = location_id
         self.name = interior_data[self.id]["name"]
-        self.service = self.load_service(interior_data[self.id]["service_reference"])
+        self.activity = self.load_activity(interior_data[self.id]["activity_reference"])
         self.objects = interior_data[self.id]["object_references"]
         self.connections = interior_data[self.id]["connections"]
 
-    def load_service(self, reference):
+    def load_activity(self, reference):
         return reference
 
     def load_objects(self, references):
@@ -22,7 +22,7 @@ class Interior:
 
 
 if __name__ == "__main__":
-    interior1 = Interior("1")
-    assert interior1.id == "1"
+    interior1 = Interior("HOUSE_MAIN_001")
+    assert interior1.id == "HOUSE_MAIN_001"
     assert interior1.name == interior_data[interior1.id]["name"]
     assert interior1.connections == interior_data[interior1.id]["connections"]

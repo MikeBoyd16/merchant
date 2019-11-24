@@ -4,12 +4,18 @@
       "SHOP_001":
       {
         "name": "The Happy Cudgel",
-        "owner": 1,
-        "jobs": {"Clerk": 5},
+        "owner": "Andrael Reluth",
+        "greeting": "Welcome to the Happy Cudgel. How can I help you?",
+        "job_wages": {"Clerk": 5},
+        "job_roster": {"Clerk": "Meligo Tullen"},
         "inventory": {},
-        "hours_of_operation": [9, 15],
-        "current_npcs": [],
-        "option_references": []
+        "item_references":
+        {
+          "HEALTH_POTION_001": 15,
+          "MANA_POTION_001": 10
+        },
+        "option_references": [],
+        "hours_of_operation": [9, 15]
       }
   }
 }

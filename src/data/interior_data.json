@@ -2,14 +2,14 @@
   "HOUSE_MAIN_001":
   {
     "name": "Shop Area",
-    "service_reference": "SHOP_001",
+    "activity_reference": "SHOP_001",
     "object_references": [],
     "connections": ["MARKET_MAIN_001", "HOUSE_BASEMENT_001"]
   },
   "HOUSE_BASEMENT_001":
   {
     "name": "Basement",
-    "service_reference": "",
+    "activity_reference": "",
     "object_references": [],
     "connections": ["HOUSE_MAIN_001"]
   }

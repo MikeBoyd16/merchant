@@ -1,11 +1,11 @@
 {
-  "1": {
+  "HEALTH_POTION_001": {
     "name": "Health Potion",
     "type": "Consumable",
     "base_value": "15",
     "description": "Restores 25 HP"
   },
-  "2": {
+  "MANA_POTION_001": {
     "name": "Mana Potion",
     "type": "Consumable",
     "base_value": "15",
