@@ -14,10 +14,10 @@ class Inventory:
     Adds an item of a specified quantity
     """
     def add_item(self, item_id, quantity):
-        for item in self.inventory_items:
-            if item_id == item.id:
-                item.quantity += quantity
-                return
+        item = self.get_item(item_id)
+        if item:
+            item.quantity += quantity
+            return
 
         new_item = Item(item_id)
         new_item.quantity = quantity
@@ -27,17 +27,23 @@ class Inventory:
     Removes an item of a specified quantity
     """
     def remove_item(self, item_id, quantity):
+        item = self.get_item(item_id)
+        if item:
+            if item.quantity - quantity < 0:
+                return -1  # Not enough items error
+            elif item.quantity - quantity == 0:
+                self.inventory_items.remove(item)
+            else:
+                item.quantity -= quantity
+            return 1
+
+    """
+    Get the item that corresponds with the item ID
+    """
+    def get_item(self, item_id):
         for item in self.inventory_items:
             if item_id == item.id:
-                if item.quantity - quantity < 0:
-                    return -1  # Not enough items error
-                elif item.quantity - quantity == 0:
-                    self.inventory_items.remove(item)
-                else:
-                    item.quantity -= quantity
-                return 1
-            else:
-                return -2  # Item not in inventory error
+                return item
 
     """
     Initializes an inventory's default items
@@ -58,33 +64,30 @@ class Inventory:
     Displays item information for every item
     """
     def display_items(self):
+        print('{:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format("Name", "Type", "Value", "Description", "Quantity"))
         if not self.inventory_items:
-            return False
-
-        print('\n{:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format("Name", "Type", "Value", "Description", "Quantity"))
-        for item in self.inventory_items:
-            print('{:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format(item.name, item.type, str(item.base_value) + " GP",
-                                                                   item.description, str(item.quantity)))
-        return True
+            print("No items")
+        else:
+            for item in self.inventory_items:
+                print('{:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format(item.name, item.type, str(item.base_value) +
+                                                                       " GP", item.description, str(item.quantity)))
+        print("\n")
 
     """
     Displays item information for every item in a numbered format
     """
     def display_items_numbered(self):
+        print('{:<5s} {:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format("#", "Name", "Type", "Value", "Description",
+                                                                      "Quantity"))
         if not self.inventory_items:
-            return False
-
-        print('\n{:<5s} {:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format("#", "Name", "Type", "Value", "Description",
-                                                                        "Quantity"))
-
-        item_num = 1
-        for item in self.inventory_items:
-            print('{:<5s} {:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format(str(item_num), item.name, item.type,
-                                                                          str(item.base_value) + " GP",
-                                                                          item.description, str(item.quantity)))
-            item_num += 1
-
-        return True
+            print("No items")
+        else:
+            item_num = 1
+            for item in self.inventory_items:
+                print('{:<5s} {:<20s} {:<15s} {:<10s} {:<20s} {:<15s}'.format(str(item_num), item.name, item.type,
+                                                                              str(item.base_value) + " GP",
+                                                                              item.description, str(item.quantity)))
+                item_num += 1
 
 
 if __name__ == "__main__":

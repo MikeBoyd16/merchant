@@ -5,7 +5,11 @@
       {
         "name": "The Happy Cudgel",
         "owner": "Andrael Reluth",
-        "greeting": "Welcome to the Happy Cudgel. How can I help you?",
+        "greeting": "\nWelcome to the Happy Cudgel. How can I help you?",
+        "thank_you_message": "Thank you for your purchase. What else would you like?",
+        "not_enough_message": "I'm sorry. I don't have enough of that item.",
+        "custom_options": ["\n3. Any local rumors?",
+                           "\n4. Where might I be able to find some work around here?"],
         "job_wages": {"Clerk": 5},
         "job_roster": {"Clerk": "Meligo Tullen"},
         "inventory": {},
