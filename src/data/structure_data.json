@@ -7,5 +7,17 @@
     "is_listed": "False",
     "property_value": 0,
     "interior_references": []
+  },
+  "COMMERCIAL_001": {
+    "name": "The Happy Cudgel",
+    "type": "Commercial",
+    "owner": "None",
+    "is_sellable": "True",
+    "is_listed": "False",
+    "property_value": 0,
+    "interior_references": [
+      "HOUSE_MAIN_001",
+      "HOUSE_BASEMENT_001"
+    ]
   }
 }

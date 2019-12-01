@@ -2,6 +2,7 @@
 The Interior class
 """
 import json
+from shop import *
 with open('data/interior_data.json') as data_file:
     interior_data = json.load(data_file)
 
@@ -10,14 +11,17 @@ class Interior:
     def __init__(self, location_id):
         self.id = location_id
         self.name = interior_data[self.id]["name"]
-        self.activity = self.load_activity(interior_data[self.id]["activity_reference"])
+        self.activities = []
+        self.init_activity(interior_data[self.id]["activity_reference"])
         self.objects = interior_data[self.id]["object_references"]
         self.connections = interior_data[self.id]["connections"]
 
-    def load_activity(self, reference):
-        return reference
+    def init_activity(self, references):
+        for reference in references:
+            if reference[:4] == "SHOP":
+                self.activities.append(Shop(reference))
 
-    def load_objects(self, references):
+    def init_objects(self, references):
         return references
 
 

@@ -2,6 +2,7 @@
 The Structure class
 """
 import json
+from interior import *
 with open('data/structure_data.json') as data_file:
     structure_data = json.load(data_file)
 
@@ -15,10 +16,12 @@ class Structure:
         self.is_sellable = structure_data[self.id]["is_sellable"]
         self.is_listed = structure_data[self.id]["is_listed"]
         self.property_value = structure_data[self.id]["property_value"]
-        self.interiors = self.load_interiors(structure_data[self.id]["interior_references"])
+        self.interiors = []
+        self.init_interiors(structure_data[self.id]["interior_references"])
 
-    def load_interiors(self, references):
-        return references
+    def init_interiors(self, references):
+        for reference in references:
+            self.interiors.append(Interior(reference))
 
 
 if __name__ == "__main__":

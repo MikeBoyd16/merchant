@@ -3,13 +3,17 @@
     "name": "Garden Grove Market",
     "type": "Commercial",
     "region": "Eastbrook",
-    "structure_references": []
+    "structure_references": [
+      "COMMERCIAL_001"
+    ]
   },
   "RESIDENTIAL_001": {
     "name": "Hightown",
     "type": "Residential",
     "region": "Eastbrook",
-    "structure_references": []
+    "structure_references": [
+      "HOUSE_001"
+    ]
   },
   "MIXED_001": {
     "name": "Docks",
