@@ -1,23 +1,66 @@
 {
-  "HOUSE_001": {
-    "name": "Eldreth Estate",
-    "type": "House",
+  "GARDEN_GROVE_EXTERIOR": {
+    "name": "Garden Grove",
+    "type": "Public",
     "owner": "None",
     "is_sellable": "False",
     "is_listed": "False",
     "property_value": 0,
-    "interior_references": []
+    "interior_references": [
+      "GARDEN_GROVE_EXTERIOR"
+    ]
   },
-  "COMMERCIAL_001": {
+  "GARDEN_GROVE_001":
+  {
     "name": "The Happy Cudgel",
     "type": "Commercial",
     "owner": "None",
     "is_sellable": "True",
     "is_listed": "False",
     "property_value": 0,
+    "interior_references":
+    [
+      "GG_MAIN_HALL_001",
+      "GG_BASEMENT_001"
+    ]
+  },
+  "GARDEN_GROVE_002":
+  {
+    "name": "Carmen's Consumables",
+    "type": "Commercial",
+    "owner": "Carmen Waladrah",
+    "is_sellable": "True",
+    "is_listed": "False",
+    "property_value": 0,
+    "interior_references":
+    [
+      "GG_MAIN_HALL_002",
+      "GG_BASEMENT_002"
+    ]
+  },
+
+  "HIGHTOWN_EXTERIOR": {
+    "name": "Hightown Commons",
+    "type": "Public",
+    "owner": "None",
+    "is_sellable": "False",
+    "is_listed": "False",
+    "property_value": 0,
     "interior_references": [
-      "HOUSE_MAIN_001",
-      "HOUSE_BASEMENT_001"
+      "HIGHTOWN_EXTERIOR"
+    ]
+  },
+  "HIGHTOWN_001":
+  {
+    "name": "Eldreth Estate",
+    "type": "Residential",
+    "owner": "Adelaine Eldreth",
+    "is_sellable": "False",
+    "is_listed": "False",
+    "property_value": 0,
+    "interior_references":
+    [
+      "HT_MAIN_HALL_001"
     ]
   }
 }

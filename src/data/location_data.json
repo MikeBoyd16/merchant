@@ -1,18 +1,21 @@
 {
-  "COMMERCIAL_001": {
+  "EASTBROOK_001": {
     "name": "Garden Grove Market",
     "type": "Commercial",
     "region": "Eastbrook",
     "structure_references": [
-      "COMMERCIAL_001"
+      "GARDEN_GROVE_EXTERIOR",
+      "GARDEN_GROVE_001",
+      "GARDEN_GROVE_002"
     ]
   },
-  "RESIDENTIAL_001": {
+  "EASTBROOK_002": {
     "name": "Hightown",
     "type": "Residential",
     "region": "Eastbrook",
     "structure_references": [
-      "HOUSE_001"
+      "HIGHTOWN_EXTERIOR",
+      "HIGHTOWN_001"
     ]
   },
   "MIXED_001": {

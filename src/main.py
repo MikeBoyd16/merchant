@@ -1,16 +1,10 @@
 """
 Main
 """
-from activity import *
 from character import *
-from interior import *
-from inventory import *
-from item import *
 from location import *
 from npc import *
 from player import *
-from shop import *
-from structure import *
 
 import json
 from structure import *
