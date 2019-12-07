@@ -2,7 +2,6 @@
 The Location class
 """
 import json
-from structure import *
 with open('data/location_data.json') as data_file:
     location_data = json.load(data_file)
 

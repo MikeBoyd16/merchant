@@ -4,12 +4,15 @@ The Game State class
 from location import *
 from structure import *
 from interior import *
+from shop import *
 with open('data/location_data.json') as data_file:
     location_data = json.load(data_file)
 with open('data/structure_data.json') as data_file:
     structure_data = json.load(data_file)
 with open('data/interior_data.json') as data_file:
     interior_data = json.load(data_file)
+with open('data/activity_data.json') as data_file:
+    activity_data = json.load(data_file)
 
 
 class GameState:
@@ -17,6 +20,7 @@ class GameState:
         self.locations = []
         self.structures = []
         self.interiors = []
+        self.shops = []
         self.load_world()
 
         self.current_location = self.locations[0]
@@ -30,6 +34,8 @@ class GameState:
             self.structures.append(Structure(structure_reference))
         for interior_reference in interior_data:
             self.interiors.append(Interior(interior_reference))
+        for shop_reference in activity_data["SHOPS"]:
+            self.shops.append(Shop(shop_reference))
 
     def run(self):
         keep_playing = True

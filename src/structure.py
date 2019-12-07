@@ -2,7 +2,6 @@
 The Structure class
 """
 import json
-from interior import *
 with open('data/structure_data.json') as data_file:
     structure_data = json.load(data_file)
 
