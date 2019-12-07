@@ -4,11 +4,11 @@
     "name": "Garden Grove Plaza",
     "activity_references": [],
     "object_references": [],
-    "connections": ["HIGHTOWN_EXTERIOR", "GARDEN_GROVE_001", "GARDEN_GROVE_002"]
+    "connections": ["HIGHTOWN_EXTERIOR", "GG_MAIN_HALL_001", "GG_MAIN_HALL_002"]
   },
   "GG_MAIN_HALL_001":
   {
-    "name": "Shop Area",
+    "name": "The Happy Cudgel",
     "activity_references": ["SHOP_001"],
     "object_references": [],
     "connections": ["GARDEN_GROVE_EXTERIOR", "GG_BASEMENT_001"]
@@ -22,7 +22,7 @@
   },
   "GG_MAIN_HALL_002":
   {
-    "name": "Shop Area",
+    "name": "Carmen's Consumables",
     "activity_references": ["SHOP_001"],
     "object_references": [],
     "connections": ["GARDEN_GROVE_EXTERIOR", "GG_BASEMENT_002"]
@@ -44,7 +44,7 @@
   },
   "HT_MAIN_HALL_001":
   {
-    "name": "Shop Area",
+    "name": "Main Hall",
     "activity_references": [],
     "object_references": [],
     "connections": ["HIGHTOWN_EXTERIOR"]
