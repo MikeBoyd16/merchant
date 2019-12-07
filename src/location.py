@@ -13,12 +13,7 @@ class Location:
         self.name = location_data[self.id]["name"]
         self.type = location_data[self.id]["type"]
         self.region = location_data[self.id]["region"]
-        self.structures = []
-        self.init_structures(location_data[self.id]["structure_references"])
-
-    def init_structures(self, references):
-        for reference in references:
-            self.structures.append(Structure(reference))
+        self.structure_references = location_data[self.id]["structure_references"]
 
 
 if __name__ == "__main__":

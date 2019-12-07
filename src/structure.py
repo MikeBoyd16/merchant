@@ -16,12 +16,7 @@ class Structure:
         self.is_sellable = structure_data[self.id]["is_sellable"]
         self.is_listed = structure_data[self.id]["is_listed"]
         self.property_value = structure_data[self.id]["property_value"]
-        self.interiors = []
-        self.init_interiors(structure_data[self.id]["interior_references"])
-
-    def init_interiors(self, references):
-        for reference in references:
-            self.interiors.append(Interior(reference))
+        self.interior_references = structure_data[self.id]["interior_references"]
 
 
 if __name__ == "__main__":
